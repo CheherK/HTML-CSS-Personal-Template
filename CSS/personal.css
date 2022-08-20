@@ -19,6 +19,11 @@
     position: relative;
     z-index: 5;
 }
+@media (max-width: 400px) {
+    .special-heading h1 {
+        font-size: 28px;
+    }
+}
 .special-heading h1:hover {
     animation: headingAnimation var(--mainTransition);
     animation-fill-mode: forwards;
@@ -47,6 +52,14 @@
 }
 .special-heading h1::after {
     right: -30px;
+}
+@media (max-width: 400px) {
+    .special-heading h1::before {
+        left: -20px;
+    }
+    .special-heading h1::after {
+        right: -20px;
+    }
 }
 .special-heading h1:hover::before,
 .special-heading h1:hover::after {
@@ -239,6 +252,14 @@ header nav .links > ul > li:hover::before {
     }
 }
 header nav .links > ul li a {
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header nav .links > ul li:last-of-type {
     font-weight: 600;
     font-size: 18px;
     color: black;
@@ -1333,6 +1354,11 @@ header nav .otherLinks ul {
     z-index: 1;
     color: white;
 }
+@media (max-width: 768px) {
+    .discount .discountAd {
+        padding: 70px 20px;
+    }
+}
 .discount .discountAd::after {
     position: absolute;
     content: "";
@@ -1358,6 +1384,11 @@ header nav .otherLinks ul {
     line-height: var(--mainLineHeight);
     padding: 20px 30px 50px 30px;
     font-size: 19px;
+}
+@media (max-width: 768px) {
+    .discount .discountAd p {
+        padding: 20px 0 50px;
+    }
 }
 .discount .discountRequest {
     flex-basis: 50%;
